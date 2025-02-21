@@ -1,4 +1,4 @@
-package model;
+package pojos;
 
 import java.util.List;
 import java.util.Objects;

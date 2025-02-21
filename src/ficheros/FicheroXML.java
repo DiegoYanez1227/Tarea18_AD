@@ -15,8 +15,8 @@ import javax.xml.transform.stream.StreamResult;
 
 import java.time.LocalDate;
 
-import model.Alumno;
-import model.Grupo;
+import pojos.Alumno;
+import pojos.Grupo;
 
 public class FicheroXML implements FicherosInterface{
 	

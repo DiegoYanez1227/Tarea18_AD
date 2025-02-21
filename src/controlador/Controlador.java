@@ -7,6 +7,8 @@ import org.apache.logging.log4j.Logger;
 
 import ficheros.*;
 import model.*;
+import pojos.Alumno;
+import pojos.Grupo;
 import vista.*;
 /**
  * Clase Controlador que maneja la interacción entre la vista y el modelo.
@@ -96,7 +98,6 @@ public class Controlador {
 				Logger.error("El número introducido no se corresponde con una instrucción válida");
 			}
 		} while (opcion != 0);
-		modelo.cerrarSession();
 	}
 
 

@@ -9,8 +9,8 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Alumno;
-import model.Grupo;
+import pojos.Alumno;
+import pojos.Grupo;
 
 public class FicheroTXT implements FicherosInterface{
 

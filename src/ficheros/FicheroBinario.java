@@ -9,7 +9,7 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import model.Alumno;
+import pojos.Alumno;
 
 public class FicheroBinario implements FicherosInterface{
 

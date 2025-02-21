@@ -10,6 +10,8 @@ import java.util.List;
 
 import org.apache.logging.log4j.*;
 
+import pojos.Alumno;
+import pojos.Grupo;
 import pool.MyDataSource;
 
 public class AlumnoMySQL implements AlumnoDAO{
@@ -323,11 +325,7 @@ public class AlumnoMySQL implements AlumnoDAO{
 		return grupos;
 	}
 
-	@Override
-	public void cerrarSession() {
-		//NO CONTIENE NADA ESTE METODO YA QUE NO ES NECESARIO CON JDBC
-		
-	}
+	
 
 
 

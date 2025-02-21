@@ -9,8 +9,8 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 
-import model.Alumno;
-import model.Grupo;
+import pojos.Alumno;
+import pojos.Grupo;
 
 public class FicheroJSON implements FicherosInterface{
 

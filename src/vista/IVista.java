@@ -3,8 +3,8 @@ package vista;
 
 import java.util.List;
 
-import model.Alumno;
-import model.Grupo;
+import pojos.Alumno;
+import pojos.Grupo;
 
 
 

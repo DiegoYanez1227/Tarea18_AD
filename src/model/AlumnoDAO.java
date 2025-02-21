@@ -4,6 +4,8 @@ import java.util.List;
 
 import jakarta.persistence.*;
 import jakarta.transaction.*;
+import pojos.Alumno;
+import pojos.Grupo;
 
 
 /**
@@ -116,5 +118,5 @@ public interface AlumnoDAO {
     List<String> obtenerCursos();
     
     
-    public void cerrarSession();
+   
 }
