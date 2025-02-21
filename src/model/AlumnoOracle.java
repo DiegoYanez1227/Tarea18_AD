@@ -17,6 +17,7 @@ import org.hibernate.Transaction;
 
 import pojos.Alumno;
 import pojos.Grupo;
+import pool.HibernateUtil;
 import pool.MyDataSource;
 
 public class AlumnoOracle implements AlumnoDAO{

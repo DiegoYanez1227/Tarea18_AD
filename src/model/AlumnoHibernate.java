@@ -9,6 +9,7 @@ import org.hibernate.Transaction;
 
 import pojos.Alumno;
 import pojos.Grupo;
+import pool.HibernateUtil;
 
 
 public class AlumnoHibernate implements AlumnoDAO{

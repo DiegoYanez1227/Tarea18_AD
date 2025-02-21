@@ -1,24 +1,26 @@
 package pojos;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Objects;
 
 import jakarta.persistence.*;
 
-@Embeddable
 @Entity
 @Table(name = "grupos")
-public class Grupo {
+public class Grupo implements Serializable {
     
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private static final long serialVersionUID = 1L;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_grupo")
-    private Integer id_grupo;
-    
-    @Column(nullable = false, length = 50)
+    private int id_grupo;
+
+    @Column(name = "nombre", nullable = false, length = 50)
     private String nombre;
-    
-    @OneToMany(mappedBy = "grupo", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
+
+    @OneToMany(mappedBy = "grupo", cascade = CascadeType.ALL)
     private List<Alumno> alumnos;
     
     public Grupo() {}

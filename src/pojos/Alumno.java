@@ -8,33 +8,37 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "alumnos")
-public class Alumno {
+public class Alumno implements Serializable {
     
+	private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "nia")
     private Integer nia;
-    
-    @Column(nullable = false, length = 50)
+
+    @Column(name = "nombre", nullable = false, length = 50)
     private String nombre;
-    
-    @Column(nullable = false, length = 50)
+
+    @Column(name = "apellidos", nullable = false, length = 100)
     private String apellidos;
     
-    @Column(name = "fecha_nacimiento", nullable = false)
+    @Column(name = "fecha", nullable = false)
     private LocalDate fechaNacimiento;
-    
-    @Column(nullable = false, length = 1)
+
+    @Column(name = "genero", nullable = false, length = 1)
     private char genero;
-    
-    @Column(nullable = false, length = 50)
+
+    @Column(name = "ciclo", nullable = false, length = 50)
     private String ciclo;
-    
-    @Column(nullable = false, length = 10)
+
+    @Column(name = "curso", nullable = false, length = 10)
     private String curso;
-    
-    @ManyToOne(fetch= FetchType.EAGER)
-    @JoinColumn(name = "id_grupo", nullable = false)
+
+    @ManyToOne
+    @JoinColumn(name = "grupo", referencedColumnName = "id_grupo", nullable = false)
     private Grupo grupo;
+
     
     public Alumno() {}
 
